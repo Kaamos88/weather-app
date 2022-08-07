@@ -10,15 +10,19 @@ const App = () => {
   const [start, setStart] = useState(true);
 
   const fetchWeather = async (term) => {
-    const forecast = await weatherApi.get('/forecast.json', {
-      params: {
-        q: term,
-        days: 3
-      }
-    })
-
-    setWeather(forecast.data);
-    setStart(false);
+    try{
+      const forecast = await weatherApi.get('/forecast.json', {
+        params: {
+          q: term,
+          days: 3
+        }
+      })
+  
+      setWeather(forecast.data);
+      setStart(false);
+    } catch (error) {
+      console.log('error', error)
+    }
   };
 
   if (start) {
