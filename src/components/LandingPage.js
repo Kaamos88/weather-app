@@ -13,7 +13,10 @@ const LandingPage = ({ fetchWeather }) => {
 				<p className='pt-5'>Or</p>
 				<p className='pt-3'>Let us locate you :) </p>
 				<div className='mx-auto pt-5 hover:cursor-pointer'>
-					<IoLocationSharp className='text-4xl mx-auto hover:text-green-600' />
+					<IoLocationSharp
+						onClick={() => alert('Not woking yet :(')}
+						className='text-4xl mx-auto hover:text-green-600'
+					/>
 				</div>
 			</div>
 		</div>

@@ -29,7 +29,7 @@ const Details = ({ fetchWeather, weather }) => {
 
 Details.propTypes = {
 	fetchWeather: PropTypes.func,
-	weather: PropTypes.array,
+	weather: PropTypes.object,
 };
 
 export default Details;

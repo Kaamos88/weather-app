@@ -20,6 +20,9 @@ const App = () => {
 			setStart(false);
 		} catch (error) {
 			console.log('error', error);
+			alert(
+				'City not found- we only accept english names or you make typo. Try again :)'
+			);
 		}
 	};
 
