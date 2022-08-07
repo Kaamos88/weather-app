@@ -1,30 +1,25 @@
 const date = new Date();
 
 const now = (date) => {
-  const day = date.getDay();
-  const month = date.getMonth();
-  const year = date.getFullYear();
+	const day = date.getDay();
+	const month = date.getMonth();
+	const year = date.getFullYear();
 
-  return [
-    formatDay(day) + '.',
-    formaMonth(month + 1) + '.',
-    year ] 
-}
+	return [formatDay(day) + '.', formaMonth(month + 1) + '.', year];
+};
 
 const formatDay = (day) => {
-  if(day < 10) {
-    return('0' + day)
-  }
-}
+	if (day < 10) {
+		return '0' + day;
+	}
+};
 
 const formaMonth = (month) => {
-  if(month < 10) {
-    return('0' + month)
-  }
-}
+	if (month < 10) {
+		return '0' + month;
+	}
+};
 
-const today = now(date)
+const today = now(date);
 
 export default today;
-
-
