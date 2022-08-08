@@ -29,16 +29,18 @@ const App = () => {
 		}
 	};
 
+	const showSpinner = spin ? (
+		<div className='absolute w-full h-full flex justify-center items-center bg-green-500 z-10 opacity-90'>
+			<Spinner />
+		</div>
+	) : (
+		''
+	);
+
 	if (start) {
 		return (
 			<div className='flex bg-gradient-to-r from-cyan-200 to-blue-200 h-screen text-green-900'>
-				{spin ? (
-					<div className='absolute w-full h-full flex justify-center items-center bg-green-500 z-10'>
-						<Spinner />
-					</div>
-				) : (
-					''
-				)}
+				{showSpinner}
 				<LandingPage fetchWeather={fetchWeather} />
 			</div>
 		);
@@ -46,13 +48,7 @@ const App = () => {
 
 	return (
 		<div className='flex bg-gradient-to-r from-cyan-200 to-blue-200 h-screen text-green-900'>
-			{spin ? (
-				<div className='absolute w-full h-full flex justify-center items-center bg-green-500 z-10'>
-					<Spinner />
-				</div>
-			) : (
-				''
-			)}
+			{showSpinner}
 			<Details weather={weather} fetchWeather={fetchWeather} />
 		</div>
 	);

@@ -20,7 +20,7 @@ const Hour = ({ weather }) => {
 		return (
 			<div
 				key={index}
-				className='flex flex-col items-center shrink-0 text-sm pt-2 border-x-2 snap-start'
+				className='flex flex-col items-center shrink-0 text-sm pt-2 border-x-2 snap-start card'
 			>
 				<p>{hour.time.slice(11)}</p>
 				<img alt='condition-icon' className='w-2/3' src={hour.condition.icon} />

@@ -38,7 +38,7 @@ const WeatherCard = ({ index, weather, day }) => {
 	const conditions = index === 0 ? currentConditions : forecastConditions;
 
 	return (
-		<div className='flex justify-between bg-white h-1/6 w-5/6 mx-auto rounded-3xl shadow-xl overflow-hidden'>
+		<div className='flex justify-between bg-white h-1/6 w-5/6 mx-auto rounded-3xl shadow-xl overflow-hidden card'>
 			<h4 className='absolute inset-x-0 pt-1 text-center'>{day}</h4>
 			<div className='flex flex-col justify-evenly w-1/3 h-full text-center'>
 				<img alt='condition-icon' className='mx-auto' src={conditions.icon} />

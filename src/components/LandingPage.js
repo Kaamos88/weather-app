@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const LandingPage = ({ fetchWeather }) => {
 	return (
-		<div className='w-full text-center rounded-xl shadow-2xl bg-green-500 sm:border-4 sm:w-4/5 sm:h-[85%] sm:rounded-3xl sm:shadow-2xl sm:m-auto lg:w-3/5 2xl:w-2/5'>
+		<div className='w-full text-center shadow-2xl bg-green-500 sm:border-4 sm:w-4/5 sm:h-[85%] sm:rounded-3xl sm:shadow-2xl sm:m-auto lg:w-3/5 2xl:w-2/5 custom'>
 			<div className='relative inset-y-1/4'>
 				<h1 className='text-4xl font-bold'>Weather App</h1>
 				<p className='pt-10 pb-5'>Search your location</p>

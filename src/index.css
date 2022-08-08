@@ -68,3 +68,21 @@
     opacity: 0;
   }
 }
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 900px) 
+                   and (orientation: landscape) {
+  .custom {
+    width: 100% !important;
+    height: max-content !important;
+    padding: 30px;
+  }
+
+  .details {
+    gap: 1.25rem;
+  }
+
+  .card {
+    height: 10rem;
+  }
+}
