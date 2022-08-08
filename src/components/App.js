@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 import weatherApi from './api/weatherApi';
 import Details from './Details';
+import Spinner from './Spinner';
 
 const App = () => {
 	const [weather, setWeather] = useState('');
 	const [start, setStart] = useState(true);
+	const [spin, setSpin] = useState(false);
 
 	const fetchWeather = async (term) => {
+		setSpin(true);
 		try {
 			const forecast = await weatherApi.get('/forecast.json', {
 				params: {
@@ -15,7 +18,7 @@ const App = () => {
 					days: 3,
 				},
 			});
-
+			setSpin(false);
 			setWeather(forecast.data);
 			setStart(false);
 		} catch (error) {
@@ -29,6 +32,13 @@ const App = () => {
 	if (start) {
 		return (
 			<div className='flex bg-gradient-to-r from-cyan-200 to-blue-200 h-screen text-green-900'>
+				{spin ? (
+					<div className='absolute w-full h-full flex justify-center items-center bg-green-500 z-10'>
+						<Spinner />
+					</div>
+				) : (
+					''
+				)}
 				<LandingPage fetchWeather={fetchWeather} />
 			</div>
 		);
@@ -36,6 +46,13 @@ const App = () => {
 
 	return (
 		<div className='flex bg-gradient-to-r from-cyan-200 to-blue-200 h-screen text-green-900'>
+			{spin ? (
+				<div className='absolute w-full h-full flex justify-center items-center bg-green-500 z-10'>
+					<Spinner />
+				</div>
+			) : (
+				''
+			)}
 			<Details weather={weather} fetchWeather={fetchWeather} />
 		</div>
 	);

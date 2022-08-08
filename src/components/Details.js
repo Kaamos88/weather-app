@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Details = ({ fetchWeather, weather }) => {
 	return (
-		<div className='flex flex-col justify-evenly w-full  bg-green-300 border-white-l sm:border-4 sm:w-4/5 sm:h-[95%] sm:rounded-3xl sm:shadow-2xl sm:m-auto lg:w-3/5 2xl:w-2/5'>
+		<div className='flex flex-col justify-evenly w-full  bg-green-500 border-white-l sm:border-4 sm:w-4/5 sm:h-[95%] sm:rounded-3xl sm:shadow-2xl sm:m-auto lg:w-3/5 2xl:w-2/5'>
 			<div className='flex items-center justify-around '>
 				<h1 className='inline-block text-green-900 text-l font-bold'>
 					Weather App
