@@ -8,8 +8,8 @@ const Hour = ({ weather }) => {
 
 	const todayConditions = weather.forecast.forecastday[0].hour;
 	const forecastList = weather.forecast.forecastday[1].hour;
-	const a = todayConditions.slice(hour);
-	const b = forecastList.slice(0, hour);
+	const a = todayConditions.slice(hour + 1);
+	const b = forecastList.slice(0, hour + 1);
 
 	const hours = a.map((hour, index) => {
 		return <HourListElement key={index} hour={hour} index={index} />;
