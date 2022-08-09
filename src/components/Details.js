@@ -18,10 +18,10 @@ const Details = ({ fetchWeather, weather }) => {
 				<span className='px-10'>{weather.location.name}</span>
 				<span className='px-10'>{today}</span>
 			</div>
-			<WeatherCard index='0' day={'Now'} weather={weather} />
+			<WeatherCard index={0} day={'Now'} weather={weather} />
 			<Hour weather={weather} />
-			<WeatherCard index='1' day={'Tommorow'} weather={weather} />
-			<WeatherCard index='2' day={'After tommorow'} weather={weather} />
+			<WeatherCard index={1} day={'Tommorow'} weather={weather} />
+			<WeatherCard index={2} day={'After tommorow'} weather={weather} />
 			<p className='text-center text-sm'>© Łukasz Knapik</p>
 		</div>
 	);

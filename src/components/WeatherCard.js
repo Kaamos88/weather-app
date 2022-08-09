@@ -75,7 +75,7 @@ const WeatherCard = ({ index, weather, day }) => {
 };
 
 WeatherCard.propTypes = {
-	index: PropTypes.string,
+	index: PropTypes.number,
 	weather: PropTypes.object,
 	day: PropTypes.string,
 };

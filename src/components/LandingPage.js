@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import { IoLocationSharp } from 'react-icons/io5';
 import PropTypes from 'prop-types';
 
 const LandingPage = ({ fetchWeather }) => {
+	const [lat, setLat] = useState('');
+	const [long, setLong] = useState('');
+
+	const getCord = window.navigator.geolocation.getCurrentPosition(
+		(position) => {
+			setLat(position.coords.latitude);
+			setLong(position.coords.longitude);
+		},
+		(err) => alert(err.message)
+	);
+
+	console.log(lat, long);
+
 	return (
 		<div className='w-full text-center shadow-2xl bg-green-500 sm:border-4 sm:w-4/5 sm:h-[85%] sm:rounded-3xl sm:shadow-2xl sm:m-auto lg:w-3/5 2xl:w-2/5 custom'>
 			<div className='relative inset-y-1/4'>
@@ -14,7 +27,7 @@ const LandingPage = ({ fetchWeather }) => {
 				<p className='pt-3'>Let us locate you :) </p>
 				<div className='mx-auto pt-5 hover:cursor-pointer'>
 					<IoLocationSharp
-						onClick={() => alert('Not woking yet :(')}
+						onClick={() => getCord}
 						className='text-4xl mx-auto hover:text-green-600'
 					/>
 				</div>

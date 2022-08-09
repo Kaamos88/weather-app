@@ -86,3 +86,21 @@
     height: 10rem;
   }
 }
+
+@media only screen and (max-device-height: 900px)
+                   and (orientation: portrait) {
+  .custom {
+    width: 100% !important;
+    padding: 10px;
+  }
+  
+  .details {
+    gap: 1.25rem;
+    height: max-content !important;
+  }
+                  
+  .card {
+    height: 10rem;
+  }
+
+}
