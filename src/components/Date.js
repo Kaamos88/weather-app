@@ -11,12 +11,16 @@ const now = (date) => {
 const formatDay = (day) => {
 	if (day < 10) {
 		return '0' + day;
+	} else {
+		return day;
 	}
 };
 
 const formaMonth = (month) => {
 	if (month < 10) {
 		return '0' + month;
+	} else {
+		return month;
 	}
 };
 
