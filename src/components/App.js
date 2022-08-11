@@ -26,6 +26,7 @@ const App = () => {
 			alert(
 				'City not found- we only accept english names or you make typo. Try again :)'
 			);
+			window.location.reload();
 		}
 	};
 
